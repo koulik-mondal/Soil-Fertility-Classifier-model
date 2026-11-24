@@ -1,0 +1,21 @@
+SOIL FERTILITY CLASSIFICATION - RUN SUMMARY
+
+Dataset: 1,000-instance source-calibrated synthetic teaching dataset
+Target: Fertility_Class (Low, Medium, High)
+Rows after duplicate removal: 1000
+Duplicate rows removed: 0
+Score/label threshold mismatches: 0
+Missing values in supplied dataset: 0
+Training rows: 800 | Testing rows: 200
+Selected model: SVM
+
+Model comparison:
+        Model  Accuracy  Precision_macro  Recall_macro  F1_macro  CV5_F1_macro_mean  CV5_F1_macro_std
+          SVM     0.845           0.8424        0.8315    0.8329             0.7748            0.0339
+Decision Tree     0.835           0.8311        0.7827    0.8020             0.7292            0.0542
+Random Forest     0.890           0.9299        0.7535    0.8000             0.8017            0.0242
+          KNN     0.690           0.6129        0.5645    0.5821             0.5605            0.0396
+
+Important: Fertility_Score is excluded from model inputs because it is used to derive Fertility_Class.
+This avoids direct target leakage. Results measure learning of the dataset's derived teaching labels,
+not validation against independent laboratory-measured fertility outcomes.
